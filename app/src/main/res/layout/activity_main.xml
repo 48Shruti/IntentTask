@@ -52,18 +52,28 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/alertSingle"
+        android:id="@+id/btnalertSingle"
         android:text="Alert Dialog Single click on list"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn3"
-        android:text="Button 3"/>
+        android:id="@+id/btnalertMultiple"
+        android:text="Alert Dialog Multiple click on list "/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn4"
-        android:text="Button 4"/>
+        android:id="@+id/btncustomDialog"
+        android:text="Custom Dialog"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btndatePicker"
+        android:text="Date Picker"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btntimePicker"
+        android:text="Time Picker"/>
 
 
 
