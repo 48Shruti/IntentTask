@@ -13,6 +13,24 @@
         android:theme="@style/Theme.IntentTask"
         tools:targetApi="31">
         <activity
+            android:name=".fragment_activity_interaction.ColorFragment"
+            android:exported="false" />
+        <activity
+            android:name=".fragment_activity_interaction.ColorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fragment_activity_interaction.BaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fragment_activity_interaction.ActivityInteraction"
+            android:exported="false" />
+        <activity
+            android:name=".fragment_activity_interaction.FragmentActivityInteraction"
+            android:exported="false" />
+        <activity
+            android:name=".UiComponentsActivity"
+            android:exported="false" />
+        <activity
             android:name=".ViewPagerActivity"
             android:exported="false" />
         <activity

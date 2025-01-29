@@ -97,6 +97,16 @@
             android:layout_height="wrap_content"
             android:text="View Pager"
             android:id="@+id/btnViewPager"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UI Components"
+            android:id="@+id/btnUiComponents"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fragment Activity Interaction"
+            android:id="@+id/btnFragmentActivityInteraction"/>
 
 
     </LinearLayout>

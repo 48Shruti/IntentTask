@@ -10,10 +10,11 @@ import android.os.Bundle
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.core.content.ContentProviderCompat.requireContext
 import com.google.android.material.snackbar.Snackbar
 import com.shruti.intenttask.databinding.ActivityMainBinding
 import com.shruti.intenttask.databinding.CustomDialogBinding
+import com.shruti.intenttask.fragment_activity_interaction.ActivityInteraction
+import com.shruti.intenttask.fragment_activity_interaction.BaseActivity
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -161,6 +162,14 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnViewPager.setOnClickListener {
             val intent = Intent(this,ViewPagerActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnUiComponents.setOnClickListener {
+            val intent = Intent(this,UiComponentsActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnFragmentActivityInteraction.setOnClickListener {
+            val intent = Intent(this, BaseActivity::class.java)
             startActivity(intent)
         }
 

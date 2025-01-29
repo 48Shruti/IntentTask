@@ -16,7 +16,10 @@ class RoomActivity : AppCompatActivity() {
             val dialog = Dialog(this)
             val dialogBinding = CustomDialogBinding.inflate(layoutInflater)
             dialog.setContentView(dialogBinding.root)
-            dialogBinding.btnclick.setOnClickListener {}
+            dialogBinding.btnclick.setOnClickListener {
+
+            }
+            dialog.show()
         }
     }
 }

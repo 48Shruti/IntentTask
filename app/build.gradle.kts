@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
+
 }
 
 android {
@@ -47,4 +49,11 @@ dependencies {
     implementation("androidx.navigation:navigation-common-ktx:2.8.5")
     implementation("androidx.navigation:navigation-fragment-ktx:2.8.5")
     implementation("androidx.navigation:navigation-ui-ktx:2.8.5")
+    // gif
+    implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.22")
+    // lottie animation
+    implementation ("com.airbnb.android:lottie:3.4.2")
+    // room database
+    implementation ("androidx.room:room-runtime:2.6.1")
+    kapt ("androidx.room:room-compiler:2.6.1")
 }
