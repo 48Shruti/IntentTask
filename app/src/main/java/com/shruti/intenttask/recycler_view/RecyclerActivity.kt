@@ -20,6 +20,11 @@ class RecyclerActivity : AppCompatActivity(),RecyclerAdapter.onClick {
         recyclerAdapter = RecyclerAdapter(item,this)
         binding.recycler.layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
         binding.recycler.adapter = recyclerAdapter
+        item.add(RecyclerData(name = "Shruti",classStudent = 10, rollNo = 56))
+        item.add(RecyclerData(name = "Roma",classStudent = 11, rollNo = 57))
+        item.add(RecyclerData(name = "Ridham",classStudent = 10, rollNo = 58))
+        item.add(RecyclerData(name = "Vanshika",classStudent = 11, rollNo = 60))
+
         binding.fab.setOnClickListener {
             val dialog = Dialog(this)
             val dialogBinding = CustomDialogBinding.inflate(layoutInflater)
