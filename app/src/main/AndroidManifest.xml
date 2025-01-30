@@ -39,9 +39,8 @@
         <activity
             android:name=".ListActivity"
             android:exported="false" />
-        <activity
-            android:name=".RoomActivity"
-            android:exported="false" />
+        <activity android:name=".room_database.RoomActivity"
+            android:exported="false"/>
         <activity
             android:name=".SpinnerActivity"
             android:exported="false" />

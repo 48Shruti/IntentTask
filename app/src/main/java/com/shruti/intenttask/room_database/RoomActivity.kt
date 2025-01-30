@@ -10,10 +10,12 @@ import com.shruti.intenttask.databinding.CustomDialogBinding
 class RoomActivity : AppCompatActivity(),RoomInterface {
     lateinit var databasePractice: RoomDatabasePractice
     lateinit var binding : ActivityRoomBinding
+    lateinit var roomAdapter: RoomAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRoomBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        roomAdapter = RoomAdapter()
         databasePractice = RoomDatabasePractice.getDatabase(this)
         binding.fab.setOnClickListener {
             val dialog = Dialog(this)
@@ -42,6 +44,7 @@ class RoomActivity : AppCompatActivity(),RoomInterface {
                         }
                     }
                     insert().execute()
+
                 }
             }
             dialog.show()

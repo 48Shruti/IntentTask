@@ -11,12 +11,14 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="number"
         android:id="@+id/etclass"
         android:hint="enter class"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etroll"
+        android:inputType="number"
         android:hint="enter roll number"/>
     <Button
         android:layout_width="wrap_content"
