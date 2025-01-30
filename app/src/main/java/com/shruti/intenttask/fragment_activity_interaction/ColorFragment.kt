@@ -43,7 +43,15 @@ class ColorFragment : Fragment(), ColorInterface {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.btnFirst.setOnClickListener {
+            colorActivity.changeTextGreen()
+        }
+        binding.btnSecond.setOnClickListener {
+            colorActivity.changeTextBlue()
+        }
+        binding.btnThird.setOnClickListener {
+            colorActivity.changeTextYellow()
+        }
     }
 
     companion object {

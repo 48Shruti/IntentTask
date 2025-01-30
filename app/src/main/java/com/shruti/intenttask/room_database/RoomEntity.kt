@@ -1,4 +1,4 @@
-package com.shruti.intenttask
+package com.shruti.intenttask.room_database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

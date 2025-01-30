@@ -8,10 +8,20 @@
         android:layout_height="wrap_content"
         android:id="@+id/etname"
         android:hint="enter name"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etclass"
+        android:hint="enter class"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etroll"
+        android:hint="enter roll number"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:id="@+id/btnclick"
-        android:text="Click"/>
+        android:text="Add"/>
 </LinearLayout>

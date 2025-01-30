@@ -22,4 +22,13 @@ class ColorActivity : AppCompatActivity() {
             colorInterface?.changeColorGreen()
         }
     }
+    fun changeTextGreen(){
+        binding.btnGreen.setText("First")
+    }
+    fun changeTextBlue(){
+        binding.btnBlue.setText("Second")
+    }
+    fun changeTextYellow(){
+        binding.btnYellow.setText("Third")
+    }
 }
