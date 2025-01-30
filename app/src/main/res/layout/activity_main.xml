@@ -105,6 +105,11 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Recycler List"
+            android:id="@+id/btnrecycler"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Fragment Activity Interaction"
             android:id="@+id/btnFragmentActivityInteraction"/>
 

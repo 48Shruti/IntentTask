@@ -15,6 +15,7 @@ import com.shruti.intenttask.databinding.ActivityMainBinding
 import com.shruti.intenttask.databinding.CustomDialogBinding
 import com.shruti.intenttask.fragment_activity_interaction.ActivityInteraction
 import com.shruti.intenttask.fragment_activity_interaction.BaseActivity
+import com.shruti.intenttask.recycler_view.RecyclerActivity
 import com.shruti.intenttask.room_database.RoomActivity
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -171,6 +172,10 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnFragmentActivityInteraction.setOnClickListener {
             val intent = Intent(this, BaseActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnrecycler.setOnClickListener {
+            val intent = Intent(this,RecyclerActivity::class.java)
             startActivity(intent)
         }
 
