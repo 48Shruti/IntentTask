@@ -8,7 +8,7 @@ import com.shruti.intenttask.R
 
 @Database(version = 1, entities = [RoomEntity::class])
 abstract class RoomDatabasePractice : RoomDatabase() {
-    abstract fun roomInterface(): RoomInterface
+    abstract fun roomDao(): RoomDao
 
     companion object {
         var roomDataBasePractice: RoomDatabasePractice? = null
@@ -22,5 +22,6 @@ abstract class RoomDatabasePractice : RoomDatabase() {
             }
             return roomDataBasePractice!!
         }
+
     }
 }

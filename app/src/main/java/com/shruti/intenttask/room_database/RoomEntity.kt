@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 @Entity
 data class RoomEntity(
     @PrimaryKey(autoGenerate = true)
-    var id: Int ?= 0,
+    var id: Int = 0,
     @ColumnInfo
     var name : String ? = " ",
     @ColumnInfo

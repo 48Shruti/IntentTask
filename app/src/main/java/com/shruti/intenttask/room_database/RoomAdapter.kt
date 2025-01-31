@@ -27,10 +27,10 @@ class RoomAdapter(val item : ArrayList<RoomEntity>,val roomInterface: RoomInterf
         holder.classStudent.setText(item[position].classNo.toString())
         holder.rollStudent.setText(item[position].rollNo.toString())
         holder.updateStudent.setOnClickListener {
-            roomInterface.update(item[position])
+            roomInterface.update(item[position],position)
         }
         holder.deleteStudent.setOnClickListener {
-            roomInterface.delete(item[position])
+            roomInterface.delete(item[position],position)
         }
     }
 

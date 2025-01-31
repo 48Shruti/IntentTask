@@ -7,14 +7,7 @@ import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
 
-@Dao
 interface RoomInterface {
-    @Insert
-    fun insert(roomEntity: RoomEntity)
-    @Query("Select * from RoomEntity")
-    fun get() : List<RoomEntity>
-    @Update
-    fun update(roomEntity: RoomEntity)
-    @Delete
-    fun delete(roomEntity: RoomEntity)
+    fun update(roomEntity: RoomEntity,position: Int)
+    fun delete(roomEntity: RoomEntity,position: Int)
 }
