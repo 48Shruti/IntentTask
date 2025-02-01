@@ -58,6 +58,7 @@ class RecyclerActivity : AppCompatActivity(),RecyclerAdapter.onClick {
         val dialogBinding = CustomDialogBinding.inflate(layoutInflater)
         dialog.setContentView(dialogBinding.root)
         dialog.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT)
+        dialogBinding.btnclick.setText("Update")
         dialogBinding.etname.setText(item[position].name)
         dialogBinding.etroll.setText(item[position].rollNo.toString())
         dialogBinding.etclass.setText(item[position].classStudent.toString())

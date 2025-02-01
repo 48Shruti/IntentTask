@@ -3,6 +3,7 @@ package com.shruti.intenttask
 import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.ViewGroup
 import com.shruti.intenttask.databinding.ActivityListBinding
 import com.shruti.intenttask.databinding.CustomDialogBinding
 import com.shruti.intenttask.databinding.CustomDialogListBinding
@@ -21,6 +22,7 @@ class ListActivity : AppCompatActivity() , StudentInterface{
             val dialog = Dialog(this)
             val dialogBinding = CustomDialogListBinding.inflate(layoutInflater)
             dialog.setContentView(dialogBinding.root)
+            dialog.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
             dialogBinding.btnadd.setOnClickListener {
                 if (dialogBinding.etname.text.isNullOrEmpty()){
                     dialogBinding.etname.error = "Enter name"
@@ -43,6 +45,8 @@ class ListActivity : AppCompatActivity() , StudentInterface{
         val dialog = Dialog(this)
         val dialogBinding = CustomDialogListBinding.inflate(layoutInflater)
         dialog.setContentView(dialogBinding.root)
+        dialog.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT)
+        dialogBinding.btnadd.setText("Update")
         dialogBinding.etname.setText(arrayList[position].name)
         dialogBinding.etclass.setText(arrayList[position].classStudent.toString())
         dialogBinding.etroll.setText(arrayList[position].rollNo.toString())

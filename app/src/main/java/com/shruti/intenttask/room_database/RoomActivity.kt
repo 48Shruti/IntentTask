@@ -83,6 +83,7 @@ class RoomActivity : AppCompatActivity(),RoomInterface {
         val dialogBinding = CustomDialogBinding.inflate(layoutInflater)
         dialog.setContentView(dialogBinding.root)
         dialog.window?.setLayout(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT)
+        dialogBinding.btnclick.setText("Update")
         dialogBinding.etclass.setText(item[position].classNo.toString())
         dialogBinding.etroll.setText(item[position].rollNo.toString())
         dialogBinding.etname.setText(item[position].name)
