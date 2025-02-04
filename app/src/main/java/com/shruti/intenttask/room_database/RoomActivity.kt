@@ -25,8 +25,9 @@ class RoomActivity : AppCompatActivity(),RoomInterface {
         linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
         gridLayout = GridLayoutManager(this,2)
         binding.recycler.adapter = roomAdapter
-        binding.recycler.layoutManager = gridLayout
+        binding.recycler.layoutManager = linearLayoutManager
         databasePractice = RoomDatabasePractice.getDatabase(this)
+        getNotes()
         binding.fab.setOnClickListener {
             val dialog = Dialog(this)
             val dialogBinding = CustomDialogBinding.inflate(layoutInflater)
@@ -40,42 +41,48 @@ class RoomActivity : AppCompatActivity(),RoomInterface {
                 } else if (dialogBinding.etroll.text.isNullOrEmpty()){
                     dialogBinding.etroll.error = "Enter roll number"
                 }else{
-                    class insert : AsyncTask<Void, Void, Void>() {
-                        override fun doInBackground(vararg p0: Void?): Void? {
-                            databasePractice.roomDao().insertNotes(RoomEntity(
-                                name = dialogBinding.etname.text.toString(),
-                                classNo = dialogBinding.etclass.text.toString().toInt(),
-                                rollNo = dialogBinding.etroll.text.toString().toInt()))
-                            return null
-                        }
-                        override fun onPostExecute(result: Void?) {
-                            super.onPostExecute(result)
-                            getNotes()
-                        }
-                    }
-                    insert().execute()
+                    databasePractice.roomDao().insertNotes(
+                        RoomEntity(
+                            name = dialogBinding.etname.text.toString(),
+                            classNo = dialogBinding.etclass.text.toString().toInt(),
+                            rollNo = dialogBinding.etroll.text.toString().toInt()))
+                    getNotes()
+//                    class insert : AsyncTask<Void, Void, Void>() {
+//                        override fun doInBackground(vararg p0: Void?): Void? {
+//                            databasePractice.roomDao().insertNotes(RoomEntity(
+//                                name = dialogBinding.etname.text.toString(),
+//                                classNo = dialogBinding.etclass.text.toString().toInt(),
+//                                rollNo = dialogBinding.etroll.text.toString().toInt()))
+//                            return null
+//                        }
+//                        override fun onPostExecute(result: Void?) {
+//                            super.onPostExecute(result)
+//                            getNotes()
+//                        }
+//                    }
+//                    insert().execute()
                     dialog.dismiss()
                     roomAdapter.notifyDataSetChanged()
                 }
             }
             dialog.show()
         }
-        getNotes()
     }
      fun getNotes(){
          item.clear()
-         class getNotes : AsyncTask<Void,Void,Void>() {
-             override fun doInBackground(vararg p0: Void?): Void? {
-                 item.addAll(databasePractice.roomDao().getNotes())
-                 return  null
-             }
-
-             override fun onPostExecute(result: Void?) {
-                 super.onPostExecute(result)
-                 roomAdapter.notifyDataSetChanged()
-             }
-         }
-         getNotes().execute()
+         item.addAll(databasePractice.roomDao().getNotes())
+//         class getNotes : AsyncTask<Void,Void,Void>() {
+//             override fun doInBackground(vararg p0: Void?): Void? {
+//                 item.addAll(databasePractice.roomDao().getNotes())
+//                 return  null
+//             }
+//
+//             override fun onPostExecute(result: Void?) {
+//                 super.onPostExecute(result)
+//                 roomAdapter.notifyDataSetChanged()
+//             }
+//         }
+//         getNotes().execute()
      }
 
     override fun update(roomEntity: RoomEntity,position:Int) {
@@ -95,44 +102,47 @@ class RoomActivity : AppCompatActivity(),RoomInterface {
             } else if (dialogBinding.etroll.text.isNullOrEmpty()){
                 dialogBinding.etroll.error = "Enter roll number"
             }else{
-//                item.set(position, RoomEntity( name = dialogBinding.etname.text.toString(),
-//                    classNo = dialogBinding.etclass.text.toString().toInt(),
-//                    rollNo = dialogBinding.etroll.text.toString().toInt()))
-                class update : AsyncTask<Void, Void, Void>() {
-                    override fun doInBackground(vararg p0: Void?): Void? {
-                        databasePractice.roomDao().updateNotes(RoomEntity(
-                            id = item[position].id,
-                            name = dialogBinding.etname.text.toString(),
-                            classNo = dialogBinding.etclass.text.toString().toInt(),
-                            rollNo = dialogBinding.etroll.text.toString().toInt()))
-                        return null
-                    }
-                    override fun onPostExecute(result: Void?) {
-                        super.onPostExecute(result)
-                        getNotes()
-                    }
-                }
-                update().execute()
-                dialog.dismiss()
+                databasePractice.roomDao().updateNotes(RoomEntity( id = item[position].id,name = dialogBinding.etname.text.toString(),
+                    classNo = dialogBinding.etclass.text.toString().toInt(),
+                    rollNo = dialogBinding.etroll.text.toString().toInt()))
+//                class update : AsyncTask<Void, Void, Void>() {
+//                    override fun doInBackground(vararg p0: Void?): Void? {
+//                        databasePractice.roomDao().updateNotes(RoomEntity(
+//                            id = item[position].id,
+//                            name = dialogBinding.etname.text.toString(),
+//                            classNo = dialogBinding.etclass.text.toString().toInt(),
+//                            rollNo = dialogBinding.etroll.text.toString().toInt()))
+//                        return null
+//                    }
+//                    override fun onPostExecute(result: Void?) {
+//                        super.onPostExecute(result)
+//                        getNotes()
+//                    }
+//                }
+//                update().execute()
+                getNotes()
                 roomAdapter.notifyDataSetChanged()
+                dialog.dismiss()
             }
         }
         dialog.show()
     }
 
     override fun delete(roomEntity: RoomEntity,position: Int) {
-        class delete : AsyncTask<Void,Void,Void>() {
-            override fun doInBackground(vararg p0: Void?): Void? {
-                databasePractice.roomDao().deleteNotes(item[position])
-                return null
-            }
-
-            override fun onPostExecute(result: Void?) {
-                super.onPostExecute(result)
-                getNotes()
-            }
-        }
-        delete().execute()
+        databasePractice.roomDao().deleteNotes(item[position])
+        getNotes()
+//        class delete : AsyncTask<Void,Void,Void>() {
+//            override fun doInBackground(vararg p0: Void?): Void? {
+//                databasePractice.roomDao().deleteNotes(item[position])
+//                return null
+//            }
+//
+//            override fun onPostExecute(result: Void?) {
+//                super.onPostExecute(result)
+//                getNotes()
+//            }
+//        }
+//        delete().execute()
         roomAdapter.notifyDataSetChanged()
     }
 }

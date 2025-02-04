@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.shruti.intenttask.R
 
-@Database(version = 1, entities = [RoomEntity::class])
+@Database(version = 1, entities = [RoomEntity::class], exportSchema = true)
 abstract class RoomDatabasePractice : RoomDatabase() {
     abstract fun roomDao(): RoomDao
 
@@ -17,8 +17,10 @@ abstract class RoomDatabasePractice : RoomDatabase() {
                 roomDataBasePractice = Room.databaseBuilder(
                     context,
                     RoomDatabasePractice::class.java,
-                    context.resources.getString(R.string.app_name)
-                ).build()
+                    context.resources.getString(R.string.app_name),
+                ).allowMainThreadQueries()
+                    .build()
+
             }
             return roomDataBasePractice!!
         }
