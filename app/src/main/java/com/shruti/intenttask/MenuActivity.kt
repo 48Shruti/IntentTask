@@ -56,7 +56,7 @@ class MenuActivity : AppCompatActivity() {
     }
     override fun onBackPressed() {
         if (!navController.popBackStack()) {
-            super.onBackPressed() 
+            super.onBackPressed()
         }
     }
 

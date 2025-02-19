@@ -190,6 +190,9 @@ class MainActivity : AppCompatActivity() {
             var intent = Intent(this,WebViewActivity::class.java)
             startActivity(intent)
         }
-
+        binding.btnDrawer.setOnClickListener {
+            var intent = Intent(this,DrawerActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
