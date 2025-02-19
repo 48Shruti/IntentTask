@@ -54,5 +54,12 @@ class MenuActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         return super.onSupportNavigateUp() || navController.popBackStack()
     }
+    override fun onBackPressed() {
+        if (!navController.popBackStack()) {
+            super.onBackPressed() 
+        }
+    }
+
+
 
 }
