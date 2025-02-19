@@ -122,6 +122,12 @@
             android:layout_height="wrap_content"
             android:id="@+id/btntab"
             android:text="Tab"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnweb"
+            android:text="WebView"/>
+
 
 
     </LinearLayout>
