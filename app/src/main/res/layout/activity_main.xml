@@ -112,6 +112,16 @@
             android:layout_height="wrap_content"
             android:text="Fragment Activity Interaction"
             android:id="@+id/btnFragmentActivityInteraction"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu"
+            android:id="@+id/menu"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btntab"
+            android:text="Tab"/>
 
 
     </LinearLayout>

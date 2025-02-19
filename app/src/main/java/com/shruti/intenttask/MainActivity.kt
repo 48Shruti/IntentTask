@@ -178,6 +178,14 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,RecyclerActivity::class.java)
             startActivity(intent)
         }
+        binding.menu.setOnClickListener {
+            var intent = Intent(this,MenuActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btntab.setOnClickListener {
+            var intent = Intent(this,TabActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 }
