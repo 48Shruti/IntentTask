@@ -23,25 +23,13 @@
 
         <action
             android:id="@+id/action_Second2Fragment_to_First2Fragment"
-            app:destination="@id/First2Fragment" />
+            app:destination="@id/First2Fragment"
+            />
     </fragment>
     <fragment
         android:id="@+id/menuFragment"
         android:name="com.shruti.intenttask.MenuFragment"
         android:label="fragment_menu"
         tools:layout="@layout/fragment_menu" />
-    <fragment
-        android:id="@+id/firstFragment2"
-        android:name="com.shruti.intenttask.FirstFragment"
-        android:label="fragment_first"
-        tools:layout="@layout/fragment_first" >
-        <action
-            android:id="@+id/action_firstFragment2_to_secondFragment2"
-            app:destination="@id/secondFragment2" />
-    </fragment>
-    <fragment
-        android:id="@+id/secondFragment2"
-        android:name="com.shruti.intenttask.SecondFragment"
-        android:label="fragment_second"
-        tools:layout="@layout/fragment_second" />
+
 </navigation>

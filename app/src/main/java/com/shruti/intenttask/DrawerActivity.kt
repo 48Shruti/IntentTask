@@ -28,6 +28,5 @@ class DrawerActivity : AppCompatActivity() {
         }else{
             super.onOptionsItemSelected(item)
         }
-
     }
 }

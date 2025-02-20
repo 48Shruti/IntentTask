@@ -24,8 +24,15 @@ class MenuActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController,appBarConfiguration)
         binding.bottomNav.setOnItemSelectedListener {
             when(it.itemId) {
-                R.id.firstFragment -> navController.navigate(R.id.firstFragment2)
-                R.id.secondFragment -> navController.navigate(R.id.secondFragment2)
+                R.id.firstFragment -> {
+                    navController.navigate(R.id.firstFragment2)
+                    navController.popBackStack(R.id.secondFragment2,true)
+
+                }
+                R.id.secondFragment -> {
+                    navController.navigate(R.id.action_firstFragment2_to_secondFragment22)
+
+                }
             }
                 return@setOnItemSelectedListener true
         }
@@ -39,11 +46,12 @@ class MenuActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
             R.id.first -> {
-                navController.navigate(R.id.First2Fragment)
+                navController.navigate(R.id.firstFragment2)
+                navController.popBackStack(R.id.secondFragment2,true)
                 return true
             }
             R.id.second -> {
-                navController.navigate(R.id.Second2Fragment)
+                navController.navigate(R.id.action_firstFragment2_to_secondFragment22)
                 return true
             }
             else -> super.onOptionsItemSelected(item)
@@ -54,11 +62,11 @@ class MenuActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         return super.onSupportNavigateUp() || navController.popBackStack()
     }
-    override fun onBackPressed() {
-        if (!navController.popBackStack()) {
-            super.onBackPressed()
-        }
-    }
+//    override fun onBackPressed() {
+//        if (!navController.popBackStack()) {
+//            super.onBackPressed()
+//        }
+//    }
 
 
 
