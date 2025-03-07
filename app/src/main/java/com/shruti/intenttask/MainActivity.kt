@@ -194,5 +194,13 @@ class MainActivity : AppCompatActivity() {
             var intent = Intent(this,DrawerActivity::class.java)
             startActivity(intent)
         }
+        binding.btnLocation.setOnClickListener {
+            val intent = Intent(this, CurrentLocActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnSharedPref.setOnClickListener {
+            val intent = Intent(this,SharedPrefActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

@@ -13,8 +13,12 @@
         android:src="@drawable/rabbit"/>
     <com.airbnb.lottie.LottieAnimationView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:id="@+id/lottie"
         app:lottie_rawRes="@raw/planets"
         app:lottie_autoPlay="true"/>
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:src="@xml/auth"/>-->
 </LinearLayout>

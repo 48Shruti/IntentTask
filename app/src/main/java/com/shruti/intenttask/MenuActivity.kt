@@ -27,11 +27,9 @@ class MenuActivity : AppCompatActivity() {
                 R.id.firstFragment -> {
                     navController.navigate(R.id.firstFragment2)
                     navController.popBackStack(R.id.secondFragment2,true)
-
                 }
                 R.id.secondFragment -> {
                     navController.navigate(R.id.action_firstFragment2_to_secondFragment22)
-
                 }
             }
                 return@setOnItemSelectedListener true

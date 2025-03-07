@@ -13,4 +13,5 @@
         app:menu="@menu/nav_menu"
         android:background="#6BFFFFFF"/>
 
+
 </androidx.drawerlayout.widget.DrawerLayout>
