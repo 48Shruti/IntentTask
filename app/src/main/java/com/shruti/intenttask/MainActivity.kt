@@ -202,5 +202,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,SharedPrefActivity::class.java)
             startActivity(intent)
         }
+        binding.btnTool.setOnClickListener {
+            val intent = Intent(this, ToolbarActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
